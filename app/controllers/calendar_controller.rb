@@ -15,7 +15,9 @@ class CalendarController < ApplicationController
     open('http://api.atnd.org/events/users/?event_id=29378&format=json'){ |f|
       JSON.parse(f.read)['events'][0]['users'].each_with_index do |user, index|
         event = Event.new
-        event.name     = user['twitter_id'] || user['nickname']
+        ['twitter_id', 'twitter_img', 'username'].each do |key|
+          event.send("#{key}=", user[key])
+        end
         event.start_at = start_date.since((index-1).days).beginning_of_day
         event.end_at   = start_date.since((index-1).days).end_of_day
         event.save!
