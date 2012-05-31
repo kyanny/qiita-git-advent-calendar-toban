@@ -1,4 +1,4 @@
-QittaGitCalendarToban::Application.routes.draw do
+QiitaGitAdventCalendarToban::Application.routes.draw do
   match '/calendar' => 'calendar#update', :method => :put, :as => :calendar_update
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 

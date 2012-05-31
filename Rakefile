@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-QittaGitCalendarToban::Application.load_tasks
+QiitaGitAdventCalendarToban::Application.load_tasks
