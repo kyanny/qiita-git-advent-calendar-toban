@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120531073551) do
+ActiveRecord::Schema.define(:version => 20120531074451) do
 
   create_table "events", :force => true do |t|
     t.datetime "start_at"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20120531073551) do
     t.datetime "updated_at",  :null => false
     t.string   "twitter_id"
     t.string   "twitter_img"
-    t.string   "username"
+    t.string   "nickname"
   end
 
 end
