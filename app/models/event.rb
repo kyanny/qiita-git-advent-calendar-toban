@@ -23,8 +23,8 @@ class Event < ActiveRecord::Base
         ['twitter_id', 'twitter_img', 'nickname'].each do |key|
           event.send("#{key}=", user[key])
         end
-        event.start_at = start_date.since((index-1).days).beginning_of_day
-        event.end_at   = start_date.since((index-1).days).end_of_day
+        event.start_at = start_date.since((index).days).beginning_of_day
+        event.end_at   = start_date.since((index).days).end_of_day
         event.save!
       end
     }
