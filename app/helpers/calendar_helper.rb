@@ -7,8 +7,8 @@ module CalendarHelper
   # custom options for this calendar
   def event_calendar_opts
     {
-      :height => 500,
-      :event_height => 80,
+      :height => 600,
+      :event_height => 90,
       :year => @year,
       :month => @month,
       :event_strips => @event_strips,
@@ -53,7 +53,7 @@ HTML
   def remind_link(event)
     message = "今日の Git Advent Calendar / June 当番は @#{event.name} さんです！どんなエントリを書いてくれるんでしょうか？楽しみですね！ #qiita"
     html = <<HTML
-<a class="remind" href="https://twitter.com/home?status=#{message}" target="_blank">リマインド</a>
+<a class="remind" href="https://twitter.com/home?status=#{URI.escape(message)}" target="_blank">リマインド</a>
 HTML
     html
   end
