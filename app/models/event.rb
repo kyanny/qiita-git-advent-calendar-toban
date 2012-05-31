@@ -5,6 +5,10 @@ class Event < ActiveRecord::Base
     self.twitter_id || self.nickname
   end
 
+  def image_url
+    self.twitter_img || 'http://atnd.org/images/icon/atnd_latent.png'
+  end
+
   def self.update_all_events
     start_date = Time.parse('2012-06-01')
     open('http://api.atnd.org/events/users/?event_id=29378&format=json'){ |f|
