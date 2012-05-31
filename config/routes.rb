@@ -1,4 +1,5 @@
 QittaGitCalendarToban::Application.routes.draw do
+  match '/calendar' => 'calendar#update', :method => :put
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   # The priority is based upon order of creation:
