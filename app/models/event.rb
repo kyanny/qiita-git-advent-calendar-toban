@@ -5,6 +5,12 @@ class Event < ActiveRecord::Base
     self.twitter_id || self.nickname
   end
 
+  def url
+    if self.twitter_id
+      "https://twitter.com/#{self.twitter_id}"
+    end
+  end
+
   def image_url
     self.twitter_img || 'http://atnd.org/images/icon/atnd_latent.png'
   end
