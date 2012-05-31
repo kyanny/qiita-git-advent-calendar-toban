@@ -12,6 +12,6 @@ class CalendarController < ApplicationController
   def update
     Event.destroy_all
     Event.update_all_events
-    redirect_to :calendar, :notice => 'updated!'
+    redirect_to :root, :notice => 'updated!'
   end
 end

@@ -1,5 +1,5 @@
 QittaGitCalendarToban::Application.routes.draw do
-  match '/calendar' => 'calendar#update', :method => :put
+  match '/calendar' => 'calendar#update', :method => :put, :as => :calendar_update
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   # The priority is based upon order of creation:
@@ -51,7 +51,7 @@ QittaGitCalendarToban::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'calendar#index'
 
   # See how all your routes lay out with "rake routes"
 
