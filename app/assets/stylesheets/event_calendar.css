@@ -122,7 +122,8 @@ a.ec-day-link {
 }
 
 .ec-today-header {
-  background-color: #d7d7ba;
+  /* background-color: #d7d7ba; */
+    background-color: yellow;
 }
 
 .ec-weekend-day-header {
