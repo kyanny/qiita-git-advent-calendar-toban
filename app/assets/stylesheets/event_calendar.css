@@ -236,3 +236,13 @@ a.ec-day-link {
   -khtml-border-radius: 2px;
   -moz-border-radius: 2px;
 }
+
+
+/*  */
+a.user:hover {
+    background-color: #333;
+}
+
+a.remind:hover {
+    background-color: #333;
+}
