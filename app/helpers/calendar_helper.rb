@@ -5,7 +5,8 @@ module CalendarHelper
   
   # custom options for this calendar
   def event_calendar_opts
-    { 
+    {
+      :event_height => 72,
       :year => @year,
       :month => @month,
       :event_strips => @event_strips,
